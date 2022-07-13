@@ -9,28 +9,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val alBieres = arrayListOf<Wine>()
-        val faker = faker{}
 
-        for(b in 0..500) {
-            alBieres.add(
-                Wine(
-                    faker.beer.name(),
-                    (33..50).random(),
-                    faker.wine.style(),
-                    5.5f
-                )
-            )
-        }
+        val alWine = arrayListOf<Wine>(
+            Wine("Coteaux de l'Aubance", "Château de Mauny", 2012, Type.BLANC),
+            Wine("Elodiance", "Caves du Val de France", 2016, Type.ROSE),
+            Wine("Val de Loire", "Château de Mauny", 2012, Type.ROUGE),
+            Wine("Alias Pinot Noire", "Vin de Val de Loire", 2012, Type.ROUGE),
+            Wine("Billecart", "Salmon Blanc de Blanc", 2002, Type.CHAMPAGNE),
+        )
 
-        /* Biere("Two Hearted Ale",33,"English Brown Ale",6.0f),
-        Biere("Storm King Stout",50,"Merican Ale",4.5f),
-        Biere("Founders Kentucky Breakfast",33,"Dark Lager",7.5f),
-        Biere("BrewDog Classic IPA",50,"Dark Lager",8.0f),
-        Biere("Cuvée des Trolls",33,"English Pale Ale",7.8f), */
-
-        val rv = findViewById<RecyclerView>(R.id.recyclerViewWines)
+        val rv = findViewById<RecyclerView>(R.id.recyclerViewWine)
         rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = WineAdapter(alBieres)
+        rv.adapter = WineAdapter(alWine)
     }
 }
