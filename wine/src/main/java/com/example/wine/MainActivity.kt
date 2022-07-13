@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
                 Wine(
                     faker.beer.name(),
                     (33..50).random(),
-                    faker.beer.style(),
+                    faker.wine.style(),
                     5.5f
                 )
             )
