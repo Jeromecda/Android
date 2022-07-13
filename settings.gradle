@@ -1,0 +1,36 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "MyFirstApp"
+include ':app'
+include ':interface1'
+include ':interface2'
+include ':findviewbyid'
+include ':chiffrealeatoire'
+include ':databinding'
+include ':vraioufaux'
+include ':navigationapi'
+include ':colorme'
+include ':navigationsafeargs'
+include ':racontemoiunehistoire'
+include ':racontemoiunehistoireViewModel'
+include ':histoire'
+include ':navintent'
+include ':lifecycle'
+include ':viewmodel'
+include ':diceroll'
+include ':lancerdevm'
+include ':actionbar'
+include ':room'
+include ':recyclerview'
